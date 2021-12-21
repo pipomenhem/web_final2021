@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>khabisa </title>
+  <link rel="stylesheet" href="tpfinal.css">
+  <script src="Untitled-2.js"></script>
+  <style> 
+    body {
+
+      
+      background-image: ur("");
+    }
+    </style>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+   google.charts.load('current', {'packages':['corechart']});
+   google.charts.setOnLoadCallback(drawChart);
+
+   function drawChart() {
+     var data = google.visualization.arrayToDataTable([
+       ['time', 'Dollar >>>LOLAR'],
+       ['11:00 AM ',3.50],
+       ['11:30 AM',3.44],
+       ['12:00 PM',3.02],
+       ['12:10 PM',3.80],
+       ['12:15 PM',3.85],
+       ['12:25 PM',3.95],
+       ['12:30 PM',3.70],
+       ['12:48 PM',3.20],
+       ['12:50 PM',3.85],
+     ]);
+
+     var options = {
+       title: 'dollar to lollar  ',
+       hAxis: {title: 'time',  titleTextStyle: {color: '#777'}},
+       vAxis: {minValue: 3}
+      
+     };
+
+     var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+   }
+ </script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body
+>
+<div class="header">
+  <a href="#default" class="logo">khabisa.com</a>
+  
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="contact_us.html">Contact</a>
+    <a href="about us page.html">About</a>
+    
+  </div>
+</div>
+
+<img class ="image" name="slide"   width="400" height="200"  />
+
+  </div>
+  
+    <h2 style="color:Tomato;">Dollar to lollar Exchange Rate Today Sell 1 USD @ 3.85 Lolar</h2>
+       
+      
+       <p>U.S.D<p>
+
+        <!--input value from dollar to lollar-->
+         <label >Dollar</label>
+      <input class = "inputnumber_dollar "  id="inputdollar" type="number" placeholder="Dollar"
+      oninput="dollar_to_lollar(this.value)" onchange="dollar_to_lollar(this.value)">
+      <span class= "outputdollar" id="outputlolar"></span> lol
+      <p>
+      <!--input value from lollar to us dollar -->
+      lollar : <input class = "inputnumber_lol "  id="inputlollar" type="number" placeholder="lollar"
+      oninput="lollar_to_dollar(this.value)"onchange="lollar_to_dollar(this.value)">  
+      <span class= "outputlolar" id="outputdollar" > </span> <span class="usd_logo">$</span>
+       </p>
+       <div id="chart_div" class ="graph"></div>
+
+      
+    
+    
+
+
+   
+  
+    
+ 
+</body>
+</html>
+
